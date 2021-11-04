@@ -1,2 +1,12 @@
-package africa.semicolon.cheetahApp;public class Main {
+package africa.semicolon.cheetahApp;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Main {
+    public static void main(String[] args) {
+
+        SpringApplication.run(Main.class,args);
+    }
 }
