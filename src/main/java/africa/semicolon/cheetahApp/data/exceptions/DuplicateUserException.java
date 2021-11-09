@@ -1,4 +1,4 @@
-package africa.semicolon.logisticApplication.data.exceptions;
+package africa.semicolon.cheetahApp.data.exceptions;
 
 public class DuplicateUserException extends LogisticAppException{
 
