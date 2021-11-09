@@ -1,12 +1,12 @@
-package africa.semicolon.logisticApplication.services;
+package africa.semicolon.cheetahApp.service;
 
-import africa.semicolon.logisticApplication.data.dtos.request.RegisterSenderRequest;
-import africa.semicolon.logisticApplication.data.dtos.responses.RegisterSenderResponse;
-import africa.semicolon.logisticApplication.data.exceptions.DuplicateUserException;
-import africa.semicolon.logisticApplication.data.models.Sender;
-import africa.semicolon.logisticApplication.data.repositories.SendersRepostory;
-import africa.semicolon.logisticApplication.data.repositories.SendersRepostoryImpl;
-import africa.semicolon.logisticApplication.utils.SenderModelMapper;
+import africa.semicolon.cheetahApp.data.dtos.request.RegisterSenderRequest;
+import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
+import africa.semicolon.cheetahApp.data.exceptions.DuplicateUserException;
+import africa.semicolon.cheetahApp.data.models.Sender;
+import africa.semicolon.cheetahApp.data.repositories.SendersRepostory;
+import africa.semicolon.cheetahApp.data.repositories.SendersRepostoryImpl;
+import africa.semicolon.cheetahApp.utils.SenderModelMapper;
 
 import java.util.List;
 import java.util.Optional;
