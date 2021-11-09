@@ -2,14 +2,12 @@ package africa.semicolon.cheetahApp.data.models;
 
 import lombok.Data;
 
-@Data
-public class Package {
-    private Integer id;
-    private String name;
-    private String receiverName;
-    private String deliveryAddress;
-    private double netWeight;
-    private String receiverPhone;
-    private String senderEmail;
+import java.util.ArrayList;
+import java.util.List;
 
+@Data
+public class TrackingInformation {
+
+    private Integer packageId;
+    private final List<TrackingData>trackingData = new ArrayList<>();
 }
