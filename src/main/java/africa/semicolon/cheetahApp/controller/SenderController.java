@@ -1,10 +1,10 @@
-package africa.semicolon.logisticApplication.controller;
+package africa.semicolon.cheetahApp.controller;
 
-import africa.semicolon.logisticApplication.data.dtos.request.RegisterSenderRequest;
-import africa.semicolon.logisticApplication.data.dtos.responses.RegisterSenderResponse;
-import africa.semicolon.logisticApplication.data.models.Sender;
-import africa.semicolon.logisticApplication.services.SenderServices;
-import africa.semicolon.logisticApplication.services.SenderServicesImpl;
+import africa.semicolon.cheetahApp.data.dtos.request.RegisterSenderRequest;
+import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
+import africa.semicolon.cheetahApp.data.models.Sender;
+import africa.semicolon.cheetahApp.service.SenderServices;
+import africa.semicolon.cheetahApp.service.SenderServicesImpl;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
