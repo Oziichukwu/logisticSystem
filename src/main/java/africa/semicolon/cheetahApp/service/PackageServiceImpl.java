@@ -7,6 +7,8 @@ import africa.semicolon.cheetahApp.data.repositories.PackageRepository;
 import africa.semicolon.cheetahApp.data.repositories.PackageRepositoryImpl;
 import africa.semicolon.cheetahApp.utils.ModelMapper;
 
+import java.util.List;
+
 public class PackageServiceImpl implements PackageService {
     private final PackageRepository packageRepository = new PackageRepositoryImpl();
 
@@ -26,5 +28,16 @@ public class PackageServiceImpl implements PackageService {
     @Override
     public Package findMyPackageWith(Integer id) {
         return packageRepository.findById(id);
+    }
+
+    @Override
+    public List<Package> getAllPackages() {
+        return packageRepository.findAll();
+    }
+
+    @Override
+    public void deleteAllPackages() {
+
+        packageRepository.deleteAll();
     }
 }
