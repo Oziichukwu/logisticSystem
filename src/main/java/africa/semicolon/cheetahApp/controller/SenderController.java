@@ -7,6 +7,8 @@ import africa.semicolon.cheetahApp.service.SenderServices;
 import africa.semicolon.cheetahApp.service.SenderServicesImpl;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 public class SenderController {
     private final SenderServices senderServices = new SenderServicesImpl();
@@ -17,7 +19,7 @@ public class SenderController {
         return senderServices.registerSender(registerSenderRequest);
     }
     @GetMapping("/api/sender/{email}")
-    public Sender findSenderByEmail(@PathVariable String email){
+    public Optional<Sender> findSenderByEmail(@PathVariable String email){
 
         return senderServices.findSenderByEmail(email);
     }
