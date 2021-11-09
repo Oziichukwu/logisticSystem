@@ -23,47 +23,53 @@ class PackageRepositoryImplTest {
     void saveNewPackage() {
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone("08100846657");
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
 
         Package savedPackage = packageRepository.save(aPackage);
         assertEquals(1, savedPackage.getId());
+
     }
+
 
     @Test
     void updatePackageTest() {
+
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
+
 
         Package savedPackage = packageRepository.save(aPackage);
-        savedPackage.setName("iPhone");
-        savedPackage.setReceiverName("uloaku");
-
+        savedPackage.setName("sniper");
         Package updatedPackage = packageRepository.save(savedPackage);
         assertEquals(1, savedPackage.getId());
     }
+
 
     @Test
     void findAll() {
 
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
+
 
         Package savedPackage = packageRepository.save(aPackage);
+
         assertEquals(1, packageRepository.findAll().size());
+
     }
 
     @Test
@@ -71,29 +77,30 @@ class PackageRepositoryImplTest {
 
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
+
 
         Package savedPackage = packageRepository.save(aPackage);
         assertEquals(1, packageRepository.findAll().size());
 
-        packageRepository.delete(aPackage);
-        assertEquals(0, packageRepository.findAll().size());
+        packageRepository.delete(savedPackage);
+        assertEquals(0,packageRepository.findAll().size());
     }
 
     @Test
-    void testDelete() {
-
+    void deleteByTrackingNumber() {
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
+
 
         Package savedPackage = packageRepository.save(aPackage);
         assertEquals(1, packageRepository.findAll().size());
@@ -103,18 +110,17 @@ class PackageRepositoryImplTest {
     }
 
     @Test
-    void testFindById() {
-
+    void findPackageTrackingNumber() {
         Package aPackage = new Package();
         aPackage.setName("Television");
-        aPackage.setSenderName("peter");
-        aPackage.setReceiverName("moses");
-        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Lagos");
-        aPackage.setNetWeight(23.8);
-        aPackage.setSenderPhone(aPackage.getReceiverPhone());
+        aPackage.setReceiverName("Moses");
+        aPackage.setReceiverPhone("08100856612");
+        aPackage.setDeliveryAddress("312 Herbert Macualey Way Sabo Yaba Lagos");
+        aPackage.setNetWeight(32.6);
+        aPackage.setSenderEmail("ukaegbugoodnews13@gmail.com");
+
 
         Package savedPackage = packageRepository.save(aPackage);
-
-        assertEquals(savedPackage, packageRepository.findById(1));
+        assertEquals(savedPackage, packageRepository.findById(savedPackage.getId()));
     }
 }

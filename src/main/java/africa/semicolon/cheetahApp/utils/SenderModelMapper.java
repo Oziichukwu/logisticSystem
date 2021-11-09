@@ -1,8 +1,8 @@
-package africa.semicolon.logisticApplication.utils;
+package africa.semicolon.cheetahApp.utils;
 
-import africa.semicolon.logisticApplication.data.dtos.request.RegisterSenderRequest;
-import africa.semicolon.logisticApplication.data.dtos.responses.RegisterSenderResponse;
-import africa.semicolon.logisticApplication.data.models.Sender;
+import africa.semicolon.cheetahApp.data.dtos.request.RegisterSenderRequest;
+import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
+import africa.semicolon.cheetahApp.data.models.Sender;
 
 public class SenderModelMapper {
 
