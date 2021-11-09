@@ -1,6 +1,6 @@
-package africa.semicolon.logisticApplication.data.repositories;
+package africa.semicolon.cheetahApp.data.repositories;
 
-import africa.semicolon.logisticApplication.data.models.Sender;
+import africa.semicolon.cheetahApp.data.models.Sender;
 
 import java.util.*;
 
