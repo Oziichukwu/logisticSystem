@@ -1,4 +1,4 @@
-package africa.semicolon.logisticApplication.data.dtos.request;
+package africa.semicolon.cheetahApp.data.dtos.request;
 
 import lombok.Data;
 

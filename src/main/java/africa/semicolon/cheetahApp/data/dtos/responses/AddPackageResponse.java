@@ -9,5 +9,4 @@ public class AddPackageResponse {
     private String receiverName;
     private String receiverPhone;
     private double packageWeight;
-    private String receiverAddress;
 }
