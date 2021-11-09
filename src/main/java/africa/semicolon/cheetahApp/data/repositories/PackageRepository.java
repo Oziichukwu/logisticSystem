@@ -11,4 +11,6 @@ public interface PackageRepository {
     void delete(Package aPackage);
     void delete(Integer trackingNumber);
     Package findById(Integer id);
+
+    void deleteAll();
 }

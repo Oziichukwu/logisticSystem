@@ -44,4 +44,9 @@ public class PackageRepositoryImpl implements PackageRepository{
     public Package findById(Integer id) {
         return database.get(id);
     }
+
+    @Override
+    public void deleteAll() {
+        database.clear();
+    }
 }
