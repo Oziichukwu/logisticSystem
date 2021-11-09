@@ -1,39 +1,50 @@
-package africa.semicolon.cheetahApp.data.exceptions;
+package africa.semicolon.cheetahApp.data.repositories;
 
 import africa.semicolon.cheetahApp.data.models.TrackingInformation;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class TrackingInformationRepositoryImpl implements TrackingInformationRepository{
 
+    private final Map<Integer, TrackingInformation>database = new HashMap<>();
     @Override
     public TrackingInformation save(TrackingInformation trackingInformation) {
-        return null;
+
+        database.put(trackingInformation.getPackageId(), trackingInformation);
+
+        return trackingInformation;
     }
 
     @Override
     public List<TrackingInformation> findAll() {
-        return null;
+        List<TrackingInformation>all = new ArrayList<>();
+        Set<Integer>keys = database.keySet();
+        for (Integer key : keys){
+            all.add(database.get(key));
+        }
+        return all;
     }
 
     @Override
     public void deleteAll() {
 
+        database.clear();
+
     }
 
     @Override
-    public Optional<TrackingInformation> findByPackageId(String packageId) {
+    public Optional<TrackingInformation> findByPackageId(Integer packageId) {
+        if (database.containsKey(packageId)) return Optional.of(database.get(packageId));
         return Optional.empty();
     }
 
     @Override
-    public void delete(String packageId) {
-
+    public void delete(Integer packageId) {
+        database.remove(packageId);
     }
 
     @Override
     public void delete(TrackingInformation trackingInformation) {
-
+        delete(trackingInformation.getPackageId());
     }
 }
