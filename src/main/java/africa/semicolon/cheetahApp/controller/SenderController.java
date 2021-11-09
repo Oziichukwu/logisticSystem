@@ -5,11 +5,9 @@ import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
 import africa.semicolon.cheetahApp.data.models.Sender;
 import africa.semicolon.cheetahApp.service.SenderServices;
 import africa.semicolon.cheetahApp.service.SenderServicesImpl;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
+@RestController
 public class SenderController {
     private final SenderServices senderServices = new SenderServicesImpl();
 
