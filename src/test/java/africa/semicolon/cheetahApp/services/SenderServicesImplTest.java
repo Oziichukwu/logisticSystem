@@ -3,7 +3,6 @@ package africa.semicolon.cheetahApp.services;
 import africa.semicolon.cheetahApp.data.dtos.request.RegisterSenderRequest;
 import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
 import africa.semicolon.cheetahApp.data.exceptions.DuplicateUserException;
-import africa.semicolon.cheetahApp.data.exceptions.SenderAlreadyExistException;
 import africa.semicolon.cheetahApp.service.SenderServices;
 import africa.semicolon.cheetahApp.service.SenderServicesImpl;
 import org.junit.jupiter.api.AfterEach;

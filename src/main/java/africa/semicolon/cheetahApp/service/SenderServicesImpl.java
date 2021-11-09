@@ -3,7 +3,6 @@ package africa.semicolon.cheetahApp.service;
 import africa.semicolon.cheetahApp.data.dtos.request.RegisterSenderRequest;
 import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
 import africa.semicolon.cheetahApp.data.exceptions.DuplicateUserException;
-import africa.semicolon.cheetahApp.data.exceptions.SenderAlreadyExistException;
 import africa.semicolon.cheetahApp.data.models.Sender;
 import africa.semicolon.cheetahApp.data.repositories.SendersRepostory;
 import africa.semicolon.cheetahApp.data.repositories.SendersRepostoryImpl;
@@ -24,10 +23,8 @@ public class SenderServicesImpl implements SenderServices{
         //convert to sender
        Sender sender = SenderModelMapper.map(registerSenderRequest);
 
-
         // save
        Sender savedSender =  sendersRepostory.save(sender);
-
        // convert sender to dto
        // RegisterSenderResponse response = SenderModelMapper.map(savedSender);
 
@@ -45,12 +42,9 @@ public class SenderServicesImpl implements SenderServices{
     }
 
     @Override
-    public Sender findSenderByEmail(String email) {
-        Optional<Sender>savedSenderInDb = sendersRepostory.findSenderByEmail(email);
-        if (savedSenderInDb.isPresent()) {
-            return sendersRepostory.findSenderByEmail(email).get();
-        }else
-            throw new SenderAlreadyExistException("No sender found with this email " + email);
+    public Optional <Sender> findSenderByEmail(String email) {
+        return sendersRepostory.findSenderByEmail(email);
     }
+
 
 }

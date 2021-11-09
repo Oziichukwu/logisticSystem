@@ -5,6 +5,7 @@ import africa.semicolon.cheetahApp.data.dtos.responses.RegisterSenderResponse;
 import africa.semicolon.cheetahApp.data.models.Sender;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface SenderServices {
 
@@ -14,5 +15,5 @@ public interface SenderServices {
 
     void deleteAllSenders();
 
-    Sender findSenderByEmail(String email);
+    Optional<Sender> findSenderByEmail(String email);
 }
