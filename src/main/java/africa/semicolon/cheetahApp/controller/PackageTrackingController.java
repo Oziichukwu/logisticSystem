@@ -17,7 +17,7 @@ public class PackageTrackingController {
         return trackingService.updateTrackingInfo(addTrackingInfoRequest);
     }
 
-    @GetMapping("/api/trackingInfo{id}")
+    @GetMapping("/api/trackingInfo/{id}")
     public TrackingInformation getTrackingInfo(@PathVariable ("id") Integer trackingId){
 
         return trackingService.trackPackage(trackingId);

@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 @RestController
 public class PackageController {
 
@@ -26,7 +27,7 @@ public class PackageController {
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
-    @GetMapping("/api/package{id}")
+    @GetMapping("/api/package/{id}")
    public Package findPackageBy(@PathVariable("id") Integer packageId){
         return packageService.findMyPackageWith(packageId);
    }
