@@ -18,6 +18,7 @@ public class SenderController {
 
         return senderServices.registerSender(registerSenderRequest);
     }
+
     @GetMapping("/api/sender/{email}")
     public Optional<Sender> findSenderByEmail(@PathVariable String email){
 
