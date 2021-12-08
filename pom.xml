@@ -36,8 +36,8 @@
     </dependencies>
 
     <properties>
-        <project.build.sourceEncoding>1.8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>1.8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>7</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>7</project.reporting.outputEncoding>
     </properties>
 
 </project>
